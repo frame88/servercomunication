@@ -1,0 +1,17 @@
+{
+    "devices": [
+        {
+            "label": "iphone",
+            "os": "ios",
+            "price": 1200
+        },
+        {
+            "label": "galaxy",
+            "os": "samsung",
+            "price": 800
+        }
+    ],
+    "login": {
+        "token": 123456
+    }
+}
