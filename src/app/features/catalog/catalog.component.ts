@@ -5,10 +5,9 @@ import { Device } from './model/device';
 @Component({
   selector: 'app-catalog',
   template: `
-    <p>catalog works</p>
-    <pre>{{devices | json }}</pre>
     <li *ngFor="let device of devices">
-      {{device.label}}
+      {{device.label}} ({{device.price}})
+      <button (click)="delete(device)">delete</button>
     </li>
   `,
   styles: []
@@ -26,14 +25,21 @@ export class CatalogComponent implements OnInit {
       });
   }
 
+  delete(device: Device) {
+    // const index = this.devices.indexOf(device);
+    this.http.delete(`http://localhost:3000/devices/${device.id}`)
+      .subscribe(() => {
+        const index = this.devices.findIndex(d => d.id === device.id);
+        this.devices.splice(index, 1);
+
+      });
+  }
+
 }
 
 
-// GET: Caricamento dati da REST API e custom types
+// DELETE: Cancellazione elementi e gestione errori XHR
 
-// importazione di un interface
-// creazione di una lista di dizionari contenenti le specifiche di alcuni cellulari
-// spiegazione del Constructor e ngOnInit 
-// stampa a schermo dei valori del file db.json
+//cancellazione dei cellulari, sia solo a schermo che dal db.json
 
 
