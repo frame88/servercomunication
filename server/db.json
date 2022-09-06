@@ -1,14 +1,22 @@
 {
     "devices": [
         {
-            "label": "iphone",
+            "label": "IPhone X",
             "os": "ios",
-            "price": 1200
+            "price": 1200,
+            "rate": 2,
+            "memory": 6000,
+            "desc": "This device is too expensive!!!!",
+            "id": 1
         },
         {
-            "label": "galaxy",
-            "os": "samsung",
-            "price": 800
+            "label": "One Plus 5",
+            "os": "android",
+            "price": 390,
+            "rate": 4,
+            "memory": 8000,
+            "desc": "One Plus 5 is a flagship phone...",
+            "id": 2
         }
     ],
     "login": {
