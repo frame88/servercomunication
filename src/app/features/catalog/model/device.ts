@@ -2,5 +2,9 @@ export interface Device {
     label: string;
     os: string;
     price: number;
-    id:number;
+    rate: number;
+    memory: number;
+    desc: string;
+    id: number;
 }
+

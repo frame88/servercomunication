@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CatalogComponent } from './features/catalog/catalog.component';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,6 +14,7 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     // RouterModule([
     //   { path: 'catalog', component: CatalogComponent },
     //   { path: 'contacts', component: ContactsComponent },
